@@ -1,5 +1,7 @@
 var turn = "X";
 var board = ['','','','','','','','',''];
+var xWins = 0;
+var oWins = 0;
 
 function myClick(cell) {
     if (cell.innerHTML == '') {
@@ -20,7 +22,11 @@ function myClick(cell) {
 		"X,X,X" == [board[2], board[5], board[8]].join() ||
 		"X,X,X" == [board[0], board[4], board[8]].join() ||
 		"X,X,X" == [board[6], board[4], board[2]].join() ) {
-		alert('X wins!');
+		banner.innerHTML = ('X wins');
+		// xWins += 1;
+		// if (banner.innerHTML == 'X wins!') {
+		// };
+		// document.getElementById('wintrackerx').innerHTML = "X = " + xWins;
 		}
 		if ( "O,O,O" == [board[0], board[1], board[2]].join() ||
 		"O,O,O" == [board[3], board[4], board[5]].join() ||
@@ -30,9 +36,25 @@ function myClick(cell) {
 		"O,O,O" == [board[2], board[5], board[8]].join() ||
 		"O,O,O" == [board[0], board[4], board[8]].join() ||
 		"O,O,O" == [board[6], board[4], board[2]].join() ) {
-		alert('O wins!');
+		banner.innerHTML = ('O wins');
+		// oWins += 1;
+		// location.reload();
+		// document.getElementById('wintrackero').innerHTML = "O = " + xWins;
 		}
 	} 
+}
+
+function reset() {
+	banner.innerHTML = "Tic Tac Toe"
+	a.innerHTML = "";
+	b.innerHTML = "";
+	c.innerHTML = "";
+	d.innerHTML = "";
+	e.innerHTML = "";
+	f.innerHTML = "";
+	g.innerHTML = "";
+	h.innerHTML = "";
+	i.innerHTML = "";
 }
 
 // if ( "X,X,X" === 
