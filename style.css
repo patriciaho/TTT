@@ -44,7 +44,6 @@ header {
 }*/
 
 .win {
-  display: block;
   clear: both;
   text-align: center;
   font-size: 30px;
@@ -52,6 +51,18 @@ header {
   background: -webkit-linear-gradient(red, orange);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#results {
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+  width: 378px;
+  height: 380px;
+  top: 170px;
+  border: 2px solid black;
+  background-color: red;
+  z-index: 99999999999;
 }
 
 .animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;}.animated.hinge{-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;}@-webkit-keyframes fadeIn {
