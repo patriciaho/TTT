@@ -33,6 +33,8 @@ function myClick(cell) {
 		"X,X,X" == [board[0], board[4], board[8]].join() ||
 		"X,X,X" == [board[6], board[4], board[2]].join() ) {
 			banner.innerHTML = ('X wins');
+			banner.setAttribute('style','background: #DF38B1');
+			banner.setAttribute('class','animated fadeIn');
 			turn = "";
 		// xWins += 1;
 		// turnCount += 1;
@@ -47,6 +49,8 @@ function myClick(cell) {
 		"O,O,O" == [board[0], board[4], board[8]].join() ||
 		"O,O,O" == [board[6], board[4], board[2]].join() ) {
 			banner.innerHTML = ('O wins');
+			banner.setAttribute('style','background: #DF38B1');
+			banner.setAttribute('class','animated fadeIn');
 			turn = "";
 		// oWins += 1;
 		// turnCount += 1;
