@@ -58,7 +58,7 @@ function myClick() {
 		}
 		if (board[0] != '' && board[1] != '' && board[2] != '' && 
 			board[3] != '' && board[4] != '' && board[5] != '' && 
-			board[6] != '' && board[0] != '' && board[0] != '' ) {
+			board[6] != '' && board[7] != '' && board[8] != '' ) {
 			banner.innerHTML = ('Draw');
 			banner.setAttribute('style','background: #DF38B1');
 			banner.setAttribute('class','animated fadeIn');
@@ -67,21 +67,21 @@ function myClick() {
 	} 
 }
 
-// function reset() {
-// 	banner.innerHTML = "Tic Tac Toe"
-// 	// for each x in (a)
-// 	a.innerHTML = "";
-// 	b.innerHTML = "";
-// 	c.innerHTML = "";
-// 	d.innerHTML = "";
-// 	e.innerHTML = "";
-// 	f.innerHTML = "";
-// 	g.innerHTML = "";
-// 	h.innerHTML = "";
-// 	i.innerHTML = "";
-// 	// var cells = document.getElementsByClassName('box');
-// 	// for(var x in cells) {
-// 	// cells[i] = console.log(cells)
-// 	// }	
-// }
+function reset() {
+	banner.innerHTML = "Tic Tac Toe"
+	// for each x in (a)
+	a.innerHTML = "";
+	b.innerHTML = "";
+	c.innerHTML = "";
+	d.innerHTML = "";
+	e.innerHTML = "";
+	f.innerHTML = "";
+	g.innerHTML = "";
+	h.innerHTML = "";
+	i.innerHTML = "";
+	// var cells = document.getElementsByClassName('box');
+	// for(var x in cells) {
+	// cells[i] = console.log(cells)
+	// }	
+}
 
