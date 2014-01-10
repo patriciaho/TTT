@@ -39,9 +39,9 @@ header {
   border-right: 3px solid black;
 }
 
-.taken:active {
+/*.taken:active {
   background: rgba(255, 0, 255, 0.2);
-}
+}*/
 
 #winstatus {
   border: 1px solid black;
