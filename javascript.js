@@ -1,19 +1,23 @@
-var turn = "X";
+var turn = "O";
 var turnCount = 0
 var board = ['','','','','','','','',''];
 var xWins = 0;
 var oWins = 0;
 var gameover = false;
 
+
 function setupPage() {
 var cells = document.getElementsByClassName('box');
 for(var i in cells) {
 	cells[i].onclick = myClick;
 }
+// winstatus.innerHTML = turn + "turn";
 }
 
 function myClick() {
+	body.setAttribute('class', '');
 	cell = this;
+	winstatus.innerHTML = turn + "turn"
     if (cell.innerHTML == '' && gameover == false) {
     	if (turn == "X") {
         turn = "O";
@@ -36,9 +40,9 @@ function myClick() {
 			banner.setAttribute('style','background: #DF38B1');
 			banner.setAttribute('class','animated fadeIn');
 			gameover = true;
-		// xWins += 1;
+			xWins += 1;
 		// turnCount += 1;
-		// document.getElementById('wintrackerx').innerHTML = "X = " + xWins;
+		document.getElementById('wintrackerx').innerHTML = "X = " + xWins;
 		}
 		if ( "O,O,O" == [board[0], board[1], board[2]].join() ||
 		"O,O,O" == [board[3], board[4], board[5]].join() ||
@@ -52,11 +56,11 @@ function myClick() {
 			banner.setAttribute('style','background: #DF38B1');
 			banner.setAttribute('class','animated fadeIn');
 			gameover = true;
-		// oWins += 1;
+			oWins += 1;
 		// turnCount += 1;
-		// document.getElementById('wintrackero').innerHTML = "O = " + xWins;
+		document.getElementById('wintrackero').innerHTML ="O = " + oWins;
 		}
-		if (board[0] != '' && board[1] != '' && board[2] != '' && 
+		if (gameover == false && board[0] != '' && board[1] != '' && board[2] != '' && 
 			board[3] != '' && board[4] != '' && board[5] != '' && 
 			board[6] != '' && board[7] != '' && board[8] != '' ) {
 			banner.innerHTML = ('Draw');
@@ -68,7 +72,10 @@ function myClick() {
 }
 
 function reset() {
-	banner.innerHTML = "Tic Tac Toe"
+	banner.innerHTML = "Tic Tac Toe";
+	banner.setAttribute('class', '');
+	body.setAttribute('class', 'animated fadeIn');
+	banner.setAttribute('style','background: rgba(100, 100, 100, 1)');
 	// for each x in (a)
 	a.innerHTML = "";
 	b.innerHTML = "";
@@ -79,6 +86,22 @@ function reset() {
 	g.innerHTML = "";
 	h.innerHTML = "";
 	i.innerHTML = "";
+	gameover = false;
+	board[0] = "";
+	board[1] = "";
+	board[2] = "";
+	board[3] = "";
+	board[4] = "";
+	board[5] = "";
+	board[6] = "";
+	board[7] = "";
+	board[8] = "";
+	// turn = "O";
+	
+	// banner.setAttribute('class','');
+	// banner.setAttribute('class', '');
+	// body.setAttribute('class', '');
+	// body.setAttribute('class','animated fadeIn');
 	// var cells = document.getElementsByClassName('box');
 	// for(var x in cells) {
 	// cells[i] = console.log(cells)

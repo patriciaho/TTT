@@ -7,8 +7,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="javascript.js"></script>
 	</head>
-	<body class="animated fadeIn" onload="setupPage()">
-		<header id="banner" onclick="location.reload()">Tic Tac Toe</header>
+	<body id="body" class="animated fadeIn" onload="setupPage()">
+		<header id="banner" onclick="reset()">Tic Tac Toe</header>
 		<div class="container">
 		<div class="row">
 			<div class="box b r" id="a"></div>
@@ -26,10 +26,9 @@
 			<div class="box" id="i" ></div>
 		</div>
 		</div>
-	<!-- 	<div id="winstatus">
-			<div id="wintrackerx"></div>
-			<div id="wintrackero"></div>
-		</div>	 -->
+		<div class="win" id="winstatus">X turn</div>	
+		<div class="win" id="wintrackerx"> </div>
+		<div class="win" id="wintrackero"> </div>
 	</body>
 </html>
 

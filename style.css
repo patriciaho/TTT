@@ -12,7 +12,7 @@ header {
 .container {
   margin: 0 auto;
   width: 384px;
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 }
 
 .row {
@@ -43,12 +43,15 @@ header {
   background: rgba(255, 0, 255, 0.2);
 }*/
 
-#winstatus {
-  border: 1px solid black;
-  position: absolute;
-  bottom: 0px;
-  height: 100px;
-  width: 500px;
+.win {
+  display: block;
+  clear: both;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Codystar', cursive;
+  background: -webkit-linear-gradient(red, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;}.animated.hinge{-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;}@-webkit-keyframes fadeIn {
