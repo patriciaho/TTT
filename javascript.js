@@ -1,3 +1,4 @@
+//Set global variables
 var gameover = false;
 var turn = "O";
 var turnCount = 0;
@@ -6,6 +7,7 @@ var xWins = 0;
 var oWins = 0;
 var draw = 0;
 
+//Body onload function
 function setupPage() {
 	var cells = document.getElementsByClassName('box');
 	for(var i in cells) {
@@ -14,6 +16,7 @@ function setupPage() {
 	winstatus.innerHTML = "X turn";
 }
 
+//Click, turn change, win count function
 function myClick() {
 	body.setAttribute('class', '');
 	var cell = this;
@@ -50,6 +53,7 @@ function myClick() {
 	} 
 }
 
+//Win logic evaluation conditions
 function winTrue(combo) {
 	return (combo == [board[0], board[1], board[2]].join() ||
 		combo == [board[3], board[4], board[5]].join() ||
@@ -62,6 +66,7 @@ function winTrue(combo) {
 	)
 }
 
+//End round resets
 function endRound() {
 	banner.setAttribute('style','background: #DF38B1');
 	banner.setAttribute('class','animated fadeIn');
@@ -69,6 +74,7 @@ function endRound() {
 	document.getElementById('results').style.display = 'block';
 }
 
+//New game reset
 function reset() {
 	gameover = false;
 	body.setAttribute('class', 'animated fadeIn');
