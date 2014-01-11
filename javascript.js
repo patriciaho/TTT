@@ -66,6 +66,7 @@ function endRound() {
 	banner.setAttribute('style','background: #DF38B1');
 	banner.setAttribute('class','animated fadeIn');
 	gameover = true;
+	document.getElementById('results').style.display = 'block';
 }
 
 function reset() {
@@ -83,6 +84,6 @@ function reset() {
 	}	
 	turn = "O"
 	winstatus.innerHTML = "X turn";
-
+	document.getElementById('results').style.display = 'none';
 }
 
