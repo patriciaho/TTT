@@ -48,7 +48,7 @@ function myClick() {
 			banner.innerHTML = ('Draw');
 			endRound();
 			draw += 1;
-			document.getElementById('drawtracker').innerHTML ="Draw = " + oWins;
+			document.getElementById('drawtracker').innerHTML ="Draw = " + draw;
 		}
 	} 
 }
